@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El BitVault de los Mundos</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            font-family: Arial, sans-serif;
+            background: #0c0f18;
+            color: #f0f0f0;
+        }
+
+        /* Panel lateral */
+        #sidebar {
+            width: 250px;
+            background: #111521;
+            padding: 20px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        #sidebar h2 {
+            margin-top: 0;
+            color: #8ab4ff;
+        }
+
+        .menu-item {
+            margin: 12px 0;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        .menu-item:hover {
+            background: #1e2536;
+        }
+
+        /* Contenido central */
+        #content {
+            flex-grow: 1;
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 26px;
+            color: #8ab4ff;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="sidebar">
+        <h2>BitVault</h2>
+        <div class="menu-item" onclick="showSection('musica')">🎵 Música</div>
+        <div class="menu-item" onclick="showSection('imagenes')">🖼️ Imágenes</div>
+        <div class="menu-item" onclick="showSection('historias')">📜 Historias</div>
+        <div class="menu-item" onclick="showSection('poesia')">✒️ Poesía</div>
+        <div class="menu-item" onclick="showSection('sugerencias')">💡 Sugerencias</div>
+    </div>
+
+    <div id="content">
+        <h1 class="section-title">Bienvenido al BitVault de los Mundos</h1>
+        <p>Selecciona una sección del panel izquierdo para explorar.</p>
+    </div>
+
+    <script>
+        function showSection(section) {
+            let content = document.getElementById("content");
+
+            if (section === "musica") {
+                content.innerHTML = `
+                    <h1 class="section-title">🎵 Música</h1>
+                    <p>Aquí aparecerán tus pistas musicales.</p>
+                `;
+            }
+
+            if (section === "imagenes") {
+                content.innerHTML = `
+                    <h1 class="section-title">🖼️ Imágenes</h1>
+                    <p>Aquí irá tu galería cósmica.</p>
+                `;
+            }
+
+            if (section === "historias") {
+                content.innerHTML = `
+                    <h1 class="section-title">📜 Historias</h1>
+                    <p>Aquí podrás mostrar tus relatos, sagas y fragmentos del BitVault.</p>
+                `;
+            }
+
+            if (section === "poesia") {
+                content.innerHTML = `
+                    <h1 class="section-title">✒️ Poesía</h1>
+                    <p>Espacio para versos, cantos y poemas del multiverso.</p>
+                `;
+            }
+
+            if (section === "sugerencias") {
+                content.innerHTML = `
+                    <h1 class="section-title">💡 Sugerencias</h1>
+                    <p>Aquí podrás mostrar consejos o ideas complementarias.</p>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>
