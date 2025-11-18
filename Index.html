@@ -60,6 +60,37 @@
         <div class="menu-item" onclick="showSection('musica')">🎵 Música</div>
         <div class="menu-item" onclick="showSection('imagenes')">🖼️ Imágenes</div>
         <div class="menu-item"
+ onclick="showSection('historias')">📜 Historias</div> 
+<div class="menu-item" onclick="showSection('poesia')">✒️ Poesía</div>
+        <div class="menu-item" onclick="showSection('sugerencias')">💡 Sugerencias</div>
+    </div>
+
+    <div id="content">
+        <h1 class="section-title">Bienvenido al BitVault de los Mundos</h1>
+        <p>Selecciona una sección del panel izquierdo para explorar.</p>
+    </div>
+
+    <script>
+        function showSection(section) {
+            let content = document.getElementById("content");
+
+            if (section === "musica") {
+                content.innerHTML = `
+                    <h1 class="section-title">🎵 Música</h1>
+                    <p>Aquí aparecerán tus pistas musicales.</p>
+                `;
+            }
+
+            if (section === "imagenes") {
+                content.innerHTML = `
+                    <h1 class="section-title">🖼️ Imágenes</h1>
+                    <p>Aquí irá tu galería cósmica.</p>
+                `;
+            }
+
+            if (section === "historias") {
+                content.innerHTML = `
+                    <h1 class="section-title">📜 Historias</h1>
 <article class="historia">
   <h3>La Sombra del Acero Maldito</h3>
   <p>
@@ -94,38 +125,6 @@
     instante preciso para despertar de nuevo.
   </p>
 </article>
-
- onclick="showSection('historias')">📜 Historias</div> 
-<div class="menu-item" onclick="showSection('poesia')">✒️ Poesía</div>
-        <div class="menu-item" onclick="showSection('sugerencias')">💡 Sugerencias</div>
-    </div>
-
-    <div id="content">
-        <h1 class="section-title">Bienvenido al BitVault de los Mundos</h1>
-        <p>Selecciona una sección del panel izquierdo para explorar.</p>
-    </div>
-
-    <script>
-        function showSection(section) {
-            let content = document.getElementById("content");
-
-            if (section === "musica") {
-                content.innerHTML = `
-                    <h1 class="section-title">🎵 Música</h1>
-                    <p>Aquí aparecerán tus pistas musicales.</p>
-                `;
-            }
-
-            if (section === "imagenes") {
-                content.innerHTML = `
-                    <h1 class="section-title">🖼️ Imágenes</h1>
-                    <p>Aquí irá tu galería cósmica.</p>
-                `;
-            }
-
-            if (section === "historias") {
-                content.innerHTML = `
-                    <h1 class="section-title">📜 Historias</h1>
                     <p>Aquí podrás mostrar tus relatos, sagas y fragmentos del BitVault.</p>
                 `;
             }
