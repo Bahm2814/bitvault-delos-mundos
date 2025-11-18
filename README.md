@@ -1,4 +1,4 @@
-![Leodrica](/public/img/Leodrica1.png)
+![Leodrica](/img/Leodrica1.png)
 
 # La Sombra del Acero Maldito
 # bitvault-delos-mundos
